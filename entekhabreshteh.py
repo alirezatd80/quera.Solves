@@ -1,5 +1,5 @@
 order = input()
 if order =="EAST":
     print("YES")
-else:
-    print("No")
+elif order == "NOT EAST":
+    print("NO")
