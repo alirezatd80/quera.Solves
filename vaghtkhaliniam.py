@@ -1,2 +1,2 @@
 work , study , I = map(int ,input().split())
-print((work+study)-I)
+print(24-((work+study)-I))
