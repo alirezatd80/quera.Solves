@@ -13,8 +13,11 @@ def Jaygasht(num, jomle="", numbers=None):
     
     return numbers
 
-number = "27711"
+number = str(input())
 mylist = set(sorted(Jaygasht(number)))
 numberslist = sorted(list(mylist))
 i = numberslist.index(int(number))
-print(numberslist[i+1])
+if i+1 == len(numberslist):
+    print(0)
+else:
+    print(numberslist[i+1])
