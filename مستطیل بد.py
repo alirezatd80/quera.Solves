@@ -7,29 +7,26 @@ def numbersinlist(numbers:list ,x:int,y:int,z:int):
 
 
 def Sumofnumbers(numinput):
-    x = numinput-2
+    x = int(numinput/2)
     numbers = []
-    
-    while(x>=1):
-        for i in range(1 , int(numinput/2)+1):
-            for j in range(i , int(numinput/2)+1):
-                if i+j+x == numinput and numbersinlist(numbers,i,j,x):
-                    littlelist = [i , j , x]
-                    numbers.append(littlelist)    
+    counter = 0
+    while(x>=numinput/3):
+        i = int(numinput/2)
+        while(i>=1):
+        
+            j = numinput-(i+x)
+            if i+j+x == numinput and numbersinlist(numbers,i,j,x) and j!= 0 and j <= i and i+j >x and i+x > j and j+x > i :
+                counter+=1
+                littlelist = [i , j , x]
+                numbers.append(littlelist) 
+            i-=1   
                             
                             
                     
         x-=1
-    return numbers
+    return counter
 
 
 numinput = int(input())
 result = Sumofnumbers(numinput)
-counter = 0
-for i in result:
-    # print(i[0],i[1],i[2])
-    if i[0]+i[1]>i[2]:
-        if i[0]+i[2]>i[1]:
-            if i[1]+i[2]> i[0]:
-                counter+=1
-print(counter)
+print(result)
