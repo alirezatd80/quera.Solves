@@ -24,9 +24,11 @@ def Sumofnumbers(numinput):
                             
                     
         x-=1
-    return counter
+    return numbers,counter
 
 
 numinput = int(input())
-result = Sumofnumbers(numinput)
-print(result)
+result,counter = Sumofnumbers(numinput)
+# for i in result:
+#     print(i)
+print(counter)
