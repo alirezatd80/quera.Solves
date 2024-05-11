@@ -4,7 +4,7 @@ number2 =b+(d*m)
 max  = max(number1,number2)
 min = min(number1,number2)
 
-if max-min > a+b:
+if max-min > a+b or m*c > m*d:
     print('Eyval baba!')
 else:
     print('Naaa, eshtebahe!')
