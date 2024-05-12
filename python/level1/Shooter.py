@@ -34,7 +34,7 @@ class Shooter:
 
     def shoot_to_target(self, target_x: int,  target_y: int,  target_distance: int,  aim_x: int,  aim_y: int) -> float:
 
-        if self.Board[self.Guns.index(self.name)] < target_distance:
+        if self.Board[self.Guns.index(self.name)] < target_distance or target_x>10 or target_y>10 or aim_x>10 or aim_y > 10:
             return 0
         elif self.name == None or self.numbertir == 0:
             return Exception
